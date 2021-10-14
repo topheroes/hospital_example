@@ -2,9 +2,21 @@
   height: 79px;
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   margin: 0 70px;
+  width: calc(100% - 70px * 2 );
+  
 }
+
+.login-form{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+
 .header-logo{
   color: #252B42;
   font-weight: bold;
@@ -52,8 +64,14 @@
   height: 1px;
   background: #000000;
 }
+.App{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .main{
-  margin-left: 197px;
+  max-width: 1045px;
 }
 .main-title{
   margin-top: 86px;
@@ -83,6 +101,12 @@
   color: #FFFFFF;
   cursor: pointer;
 }
+
+.main-contacts-btn:disabled{
+  opacity: 0.5;
+}
+
+
 .main-sign-btn{
   width: 155px;
   height: 52px;
@@ -104,22 +128,16 @@
  margin-top: 96px;
  gap: 1.8em;
 }
-.main-block-one,
-.main-block-two,
-.main-block-three{
+.main-block-card{
   width: 328px;
   height: 248px;
   box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
   background: #FFFFFF;
 }
-.main-block-one__img,
-.main-block-two__img,
-.main-block-three__img{
+.main-block-card__img{
   padding: 35px 0 0 40px;
 }
-.main-block-one__title,
-.main-block-two__title,
-.main-block-three__title{
+.main-block-card__title{
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
@@ -129,17 +147,13 @@
   color: #252B42;
   padding-left: 40px;
 }
-.main-block-one__line,
-.main-block-two__line,
-.main-block-three__line{
+.main-block-card__line{
   width: 50px;
   height: 2px;
   background: #E74040;
   margin-left: 40px; 
 }
-.main-block-one__text,
-.main-block-two__text,
-.main-block-three__text{
+.main-block-card__text{
   font-family: Montserrat;
   font-style: normal;
   font-weight: normal;
