@@ -4,13 +4,10 @@ import React from "react";
 
 
 
-function Home(){
+function Home({isLoggedIn, setIsLoggedIn, loggedInUser, setLoggedInUser}){
 
-  const [isLoggedIn, setIsLoggedIn] = React.useState(false);
-  const [loggedInUser, setLoggedInUser] = React.useState("");
 
   React.useEffect(()=>{
-
 
     const data = localStorage.getItem("loggedInUser");
     if(data){
@@ -18,25 +15,16 @@ function Home(){
       setIsLoggedIn(true);
     }
 
-
   })
-
-
 
 
   return(
 
     !isLoggedIn ? <MainLoggedOut setIsLoggedIn={setIsLoggedIn} /> : <MainLoggedIn setIsLoggedIn={setIsLoggedIn} loggedInUser={loggedInUser}/>
 
-
-
   )
 
-
 }
-
-
-
 
 
 export default Home;

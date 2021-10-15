@@ -5,18 +5,14 @@
   flex-direction: row;
   align-items: center;
   margin: 0 70px;
-  width: calc(100% - 70px * 2 );
-  
+  width: calc(100% - 70px * 2 ); 
 }
-
 .login-form{
   display: flex;
   justify-content: center;
   flex-direction: column;
   gap: 0.5em;
 }
-
-
 .header-logo{
   color: #252B42;
   font-weight: bold;
@@ -80,11 +76,10 @@
   font-weight: bold;
   letter-spacing: 0.2px;
   color: #252B42;
-  font-size: 28px;
+  font-size: 30px;
 }
 .main-buttons button{
   margin-right: 10px;
-  margin-top: 35px;
 }
 .main-contacts-btn{
   width: 128px;
@@ -101,12 +96,9 @@
   color: #FFFFFF;
   cursor: pointer;
 }
-
 .main-contacts-btn:disabled{
   opacity: 0.5;
 }
-
-
 .main-sign-btn{
   width: 155px;
   height: 52px;
@@ -122,10 +114,72 @@
   color: #FF685B;
   cursor: pointer;
 }
+.main-logged{
+  margin-left: 197px;
+}
+.main-logged-title{
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 58px;
+  line-height: 80px;
+  letter-spacing: 0.2px;
+  color: #252B42;
+  margin-top: 71px;
+}
+.main-logged-sign-btn:hover,
+.main-logged-contacts-btn:hover{
+  opacity: 0.4;
+  transition: 0.5s;
+}
+.main-logged-buttons button{
+  margin-right: 10px;
+}
+.main-logged-sign-btn{
+  width: 228px;
+  height: 52px;
+  background: #FF685B;
+  border-radius: 5px;
+  border: none;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.2px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.main-logged-contacts-btn{
+  width: 228px;
+  height: 52px;
+  background: #FFFFFF;
+  border: 1px solid #FF685B;
+  border-radius: 5px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.2px;
+  color: #FF685B;
+  cursor: pointer;
+}
+.contacts-title{
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 58px;  
+  line-height: 80px;
+  letter-spacing: 0.2px;
+  color: #252B42;
+  margin-left: 197px;
+  margin-top: 184px;
+}
 .main-block{
  display: flex;
  flex-direction: row;
- margin-top: 96px;
+ margin-top: 115px;
  gap: 1.8em;
 }
 .main-block-card{

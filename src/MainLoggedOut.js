@@ -2,7 +2,6 @@ import './App.css';
 import React from 'react';
 import Modal from 'react-modal';
 import users from './user.json';
-
 import {
     
     Link
@@ -10,7 +9,6 @@ import {
 
 
 Modal.setAppElement('#root');
-
 
 
 
@@ -92,11 +90,8 @@ function MainLoggedOut({setIsLoggedIn}) {
     else{
       setErrorText("Что-то не так")
     }
-    
 
   }
-
-
 
   return (
     <div className="App">
@@ -143,8 +138,6 @@ function MainLoggedOut({setIsLoggedIn}) {
           <MainBlockCard imageLink="./images/icon1.png" mainText="Онлайн-прием" fishText="Рыба текст" />
           <MainBlockCard imageLink="./images/icon2.png" mainText="Экстренный случай" fishText="Рыба текст" />
           <MainBlockCard imageLink="./images/icon3.png" mainText="Лечение рака" fishText="Рыба текст" />
-
-          
         </div>
       </main>
     </div>

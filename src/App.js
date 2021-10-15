@@ -11,22 +11,19 @@ import {
 
 function App(){
 
-  
-
+  const[isLoggedIn, setIsLoggedIn] = React.useState(false);
+  const [loggedInUser, setLoggedInUser] = React.useState("");
 
   return(
-
     
     <Router>
-  
-
-  
+    
     <Switch>
       <Route path="/contacts">
-        <Contacts />
+        <Contacts IsLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser}/>
       </Route>
       <Route path="/">
-        <Home />
+        <Home IsLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser} />
       </Route>
       
     </Switch>
@@ -34,14 +31,9 @@ function App(){
 </Router>
 
 
-
   )
 
-
 }
-
-
-
 
 
 export default App;
