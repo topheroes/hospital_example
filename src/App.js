@@ -8,27 +8,33 @@ import {
   Link
 } from "react-router-dom";
 
+import { isLoggedInContext, loggedInUserContext } from "./contexts"
 
-function App(){
+function App() {
 
-  const[isLoggedIn, setIsLoggedIn] = React.useState(false);
-  const [loggedInUser, setLoggedInUser] = React.useState("");
+  const isLoggedInC = React.useState(false);
+  const loggedInUserC = React.useState("");
 
-  return(
-    
-    <Router>
-    
-    <Switch>
-      <Route path="/contacts">
-        <Contacts IsLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser}/>
-      </Route>
-      <Route path="/">
-        <Home IsLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser} />
-      </Route>
-      
-    </Switch>
-  
-</Router>
+  return (
+
+
+    <isLoggedInContext.Provider value={isLoggedInC}>
+      <loggedInUserContext.Provider value={loggedInUserC}>
+        <Router>
+
+          <Switch>
+            <Route path="/contacts">
+              <Contacts/>
+            </Route>
+            <Route path="/">
+              <Home/>
+            </Route>
+
+          </Switch>
+
+        </Router>
+      </loggedInUserContext.Provider>
+    </isLoggedInContext.Provider>
 
 
   )

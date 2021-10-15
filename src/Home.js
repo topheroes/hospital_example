@@ -1,10 +1,14 @@
 import MainLoggedOut from "./MainLoggedOut";
 import MainLoggedIn from "./MainLoggedIn";
-import React from "react";
+import React, {useContext} from "react";
 
+import { isLoggedInContext, loggedInUserContext } from "./contexts"
 
+function Home(){
 
-function Home({isLoggedIn, setIsLoggedIn, loggedInUser, setLoggedInUser}){
+  const [isLoggedIn, setIsLoggedIn] = useContext(isLoggedInContext);
+  const [loggedInUser, setLoggedInUser] = useContext(loggedInUserContext);
+
 
 
   React.useEffect(()=>{

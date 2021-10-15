@@ -1,12 +1,15 @@
-import React from "react";
+import React, {useContext}  from "react";
 import {
     Link
   } 
 from "react-router-dom";
+import { isLoggedInContext, loggedInUserContext } from "./contexts";
 
 
+function Contacts(){
 
-function Contacts({setIsLoggedIn}){
+    const [isLoggedIn, setIsLoggedIn] = useContext(isLoggedInContext);
+    const [loggedInUser, setLoggedInUser] = useContext(loggedInUserContext);
 
     return (
         <>
