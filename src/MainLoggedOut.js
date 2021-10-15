@@ -1,12 +1,8 @@
 import './App.css';
 import React from 'react';
 import LoginForm from "./LogInForm";
+import Header from "./Header";
 
-
-import {
-    
-    Link
-  } from "react-router-dom";
 
 
 
@@ -48,16 +44,7 @@ function MainLoggedOut({setIsLoggedIn}) {
   return (
     <div className="App">
       <LoginForm modalIsOpen={modalIsOpen} setIsOpen={setIsOpen} setIsLoggedIn={setIsLoggedIn}/>
-      <header className="header">
-        <div className="header-logo">
-          logo
-        </div>
-        <div className="header-buttons">
-          <Link to="/contacts"><button className="contacts-btn">Контакты</button></Link>
-          <button className="sign-btn" onClick={()=>openModal()}>Войти</button>
-        </div>
-      </header>
-      <div className="header-line"></div>
+      <Header openModal={openModal} setIsOpen={setIsOpen}/>
       <main className="main">
         <div className="main-title">
           <h1>Место для получения<br />

@@ -6,7 +6,7 @@ from "react-router-dom";
 import { isLoggedInContext, loggedInUserContext } from "./contexts";
 import LoginForm from "./LogInForm";
 
-
+import Header from "./Header";
 function Contacts(){
 
     const [isLoggedIn, setIsLoggedIn] = useContext(isLoggedInContext);
@@ -15,18 +15,9 @@ function Contacts(){
     
 
     return (
-        <>
-            <header className="header">
-                <LoginForm modalIsOpen={modalIsOpen} setIsOpen={setIsOpen} setIsLoggedIn={setIsLoggedIn}/>
-                <div className="header-logo">
-                    logo
-                </div>
-                <div className="header-buttons">
-                    <Link to="/contacts"><button className="contacts-btn">Контакты</button></Link>
-                    <button className="sign-btn" onClick={()=> isLoggedIn ? setIsLoggedIn(false) : setIsOpen(true)}>{isLoggedIn ? "Выйти" : "Войти"}</button>
-                </div>
-            </header>
-            <div className="header-line"></div>
+        <>  
+             <LoginForm modalIsOpen={modalIsOpen} setIsOpen={setIsOpen} setIsLoggedIn={setIsLoggedIn}/>
+            <Header setIsOpen={setIsOpen}/>
             <div className="contacts-title">Контакты</div>
         </>
     )

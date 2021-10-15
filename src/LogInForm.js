@@ -73,13 +73,13 @@ function LoginForm({ modalIsOpen, setIsOpen, setIsLoggedIn }) {
         >
             <div>
                 <div className="login-form">
-                    <label for="username">Пользователь:</label>
+                    <label htmlFor="username">Пользователь:</label>
                     <input value={username} onChange={(e) => handleChange(e.target.value, setUserName)} id="username" type="text" name="login" placeholder="username"></input>
-                    <label for="password">Пароль:</label>
+                    <label htmlFor="password">Пароль:</label>
                     <input value={password} onChange={(e) => handleChange(e.target.value, setPassword)} id="password" type="password" name="password" placeholder="password"></input>
                 </div>
                 <span>{errorText}</span>
-                <div className="main-buttons">
+                <div className="main-login-buttons">
                     <button disabled={isButtonDisabled} onClick={() => console.log(200)} className="main-contacts-btn" onClick={() => handleLogin()}>Войти</button>
                 </div>
             </div>

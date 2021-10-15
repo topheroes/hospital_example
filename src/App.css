@@ -21,7 +21,7 @@
   transition: 0.5s
 }
 .header-buttons button{
-  margin-left: 59px;
+  margin-left: 60px;
 }
 .contacts-btn{
   font-family: Open Sans;
@@ -70,11 +70,7 @@
   font-weight: bold;
   letter-spacing: 0.2px;
   color: #252B42;
-  font-size: 28px;
-}
-.main-login-buttons{
-  margin-top: 10px;
-  text-align: center;
+  font-size: 30px;
 }
 .main-buttons button{
   margin-right: 10px;
@@ -130,6 +126,10 @@
   letter-spacing: 0.2px;
   color: #252B42;
   margin-top: 71px;
+}
+.main-login-buttons{
+  margin-top: 10px;
+  text-align: center;
 }
 .main-logged-sign-btn:hover,
 .main-logged-contacts-btn:hover{
@@ -227,6 +227,11 @@
     flex-wrap: wrap;
   }
 }
+@media(max-width: 690px){
+  .main-logged-buttons button{
+    margin-bottom: 10px;
+  }
+}
 @media(max-width: 590px){
   .header-buttons{
     display: flex;
@@ -235,33 +240,38 @@
 }
 @media(max-width: 490px){
   .header{
-    height: auto;
-    flex-direction: column;
-    
+    /* height: auto; */
+    flex-direction: row;
+    flex-wrap: nowrap;
+    max-width: 400px;
   }
   .header-buttons{
-    
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    
   }
   .header-buttons button{
     margin: auto;
   }
-
-
   .header-logo{
-    align-self: center;
+    justify-content: flex-start;
   }
 }
 @media(max-width: 470px){
   .contacts-title{
-    margin-left: 40px;
+    margin-left: 30px;
   }
 }
 @media(max-width: 435px){
   .main-logged{
-    margin-left: 80px;
+    margin-left: 40px;
+  }
+}
+@media(max-width: 380px){
+   .header{
+     width: 290px;
+   } 
+  .main-title{
+    font-size: 22px;
+    text-align: center;
   }
 }
