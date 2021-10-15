@@ -7,12 +7,6 @@
   margin: 0 70px;
   width: calc(100% - 70px * 2 ); 
 }
-.login-form{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: 0.5em;
-}
 .header-logo{
   color: #252B42;
   font-weight: bold;
@@ -76,7 +70,11 @@
   font-weight: bold;
   letter-spacing: 0.2px;
   color: #252B42;
-  font-size: 30px;
+  font-size: 28px;
+}
+.main-login-buttons{
+  margin-top: 10px;
+  text-align: center;
 }
 .main-buttons button{
   margin-right: 10px;
@@ -113,6 +111,12 @@
   letter-spacing: 0.2px;
   color: #FF685B;
   cursor: pointer;
+}
+.login-form{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5em;
 }
 .main-logged{
   margin-left: 197px;
@@ -217,4 +221,47 @@
   color: #737373;
   padding: 10px 0 0 40px;
 }
+@media(max-width: 1050px){
+  .main-block{
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media(max-width: 590px){
+  .header-buttons{
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+@media(max-width: 490px){
+  .header{
+    height: auto;
+    flex-direction: column;
+    
+  }
+  .header-buttons{
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .header-buttons button{
+    margin: auto;
+  }
 
+
+  .header-logo{
+    align-self: center;
+  }
+}
+@media(max-width: 470px){
+  .contacts-title{
+    margin-left: 40px;
+  }
+}
+@media(max-width: 435px){
+  .main-logged{
+    margin-left: 80px;
+  }
+}
