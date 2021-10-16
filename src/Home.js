@@ -9,7 +9,7 @@ function Home(){
   const [isLoggedIn, setIsLoggedIn] = useContext(isLoggedInContext);
   const [loggedInUser, setLoggedInUser] = useContext(loggedInUserContext);
 
-
+  console.log(`home isLoggedIn is ${isLoggedIn}`);
 
   React.useEffect(()=>{
 
@@ -24,7 +24,7 @@ function Home(){
 
   return(
 
-    !isLoggedIn ? <MainLoggedOut setIsLoggedIn={setIsLoggedIn} /> : <MainLoggedIn setIsLoggedIn={setIsLoggedIn} loggedInUser={loggedInUser}/>
+    !isLoggedIn ? <MainLoggedOut setIsLoggedIn={setIsLoggedIn} /> : <MainLoggedIn isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} loggedInUser={loggedInUser}/>
 
   )
 

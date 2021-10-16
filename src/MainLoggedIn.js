@@ -1,10 +1,15 @@
 import React from "react";
 import {
-    Link
+  useHistory,
+    Link,
   } from "react-router-dom";
 import Header from "./Header";
 
-function MainLoggedIn({setIsLoggedIn, loggedInUser}){
+function MainLoggedIn({isLoggedIn, setIsOpen, setIsLoggedIn, loggedInUser}){
+
+  const history = useHistory();
+
+  console.log(`isLoggedIn us ${isLoggedIn}`)
 
     return(
         <>
@@ -14,8 +19,8 @@ function MainLoggedIn({setIsLoggedIn, loggedInUser}){
         <div className="main-logged">
           <h1 className="main-logged-title">Привет, {loggedInUser}</h1>
           <div className="main-logged-buttons">
-            <button className="main-logged-sign-btn">Выйти из аккаунта</button>
-            <button className="main-logged-contacts-btn">Перейти в контакты</button>
+          <button className="main-logged-sign-btn" onClick={()=> isLoggedIn ? (()=>{localStorage.removeItem("loggedInUser");setIsLoggedIn(false); history.push("/"); }) () : setIsOpen(true)}>{isLoggedIn ? "Выйти из аккаунта" : "Войти"}</button> 
+          <Link to="/contacts"><button className="main-logged-contacts-btn">Перейти в контакты</button></Link>
           </div>
         </div>
 
